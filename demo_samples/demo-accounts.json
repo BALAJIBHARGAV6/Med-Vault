@@ -1,0 +1,106 @@
+{
+  "demo_accounts": {
+    "admin": {
+      "address": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "private_key": "0xabc123def456...",
+      "role": "Organization Admin",
+      "organization": "General Hospital"
+    },
+    "doctors": [
+      {
+        "address": "0x2345678901bcdef12345678901bcdef12345678901bcdef12345678901bcdef1",
+        "private_key": "0xdef456abc789...",
+        "name": "Dr. Alice Smith",
+        "license": "MD-12345",
+        "specialty": "Cardiology",
+        "organization": "General Hospital"
+      },
+      {
+        "address": "0x3456789012cdef123456789012cdef123456789012cdef123456789012cdef12",
+        "private_key": "0x789abc123def...",
+        "name": "Dr. Bob Johnson",
+        "license": "MD-67890", 
+        "specialty": "Internal Medicine",
+        "organization": "General Hospital"
+      }
+    ],
+    "patients": [
+      {
+        "address": "0x4567890123def1234567890123def1234567890123def1234567890123def123",
+        "private_key": "0x123def456abc...",
+        "name": "Charlie Brown",
+        "age": 35,
+        "conditions": ["Hypertension"]
+      },
+      {
+        "address": "0x567890124ef12345678901234ef12345678901234ef12345678901234ef1234",
+        "private_key": "0x456abc789def...",
+        "name": "Dana White",
+        "age": 28,
+        "conditions": ["Diabetes Type 2"]
+      }
+    ]
+  },
+  "organizations": [
+    {
+      "org_id": "general_hospital",
+      "name": "General Hospital",
+      "admin_address": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+    }
+  ],
+  "sample_records": [
+    {
+      "patient_name": "Charlie Brown",
+      "age": 35,
+      "suffering_disease": "Hypertension",
+      "prescription": "Lisinopril 10mg daily, take in morning with food",
+      "observations": "Patient reports occasional headaches and fatigue. Blood pressure consistently elevated over past 6 months.",
+      "vital_signs": {
+        "blood_pressure": "140/90 mmHg",
+        "heart_rate": "72 bpm",
+        "temperature": "98.6°F",
+        "weight": "180 lbs"
+      },
+      "doctor_notes": "Mild hypertension diagnosed. Recommend lifestyle modifications including low-sodium diet, regular exercise, and stress management. Follow-up in 3 months.",
+      "file_type": "PDF",
+      "attachments": ["cardiology-report.pdf"]
+    },
+    {
+      "patient_name": "Dana White", 
+      "age": 28,
+      "suffering_disease": "Diabetes Type 2",
+      "prescription": "Metformin 500mg twice daily with meals",
+      "observations": "HbA1c elevated at 7.2%. Patient reports good adherence to diet but limited exercise due to work schedule.",
+      "vital_signs": {
+        "blood_pressure": "125/80 mmHg",
+        "heart_rate": "68 bpm",
+        "blood_glucose": "145 mg/dL (fasting)",
+        "weight": "165 lbs"
+      },
+      "doctor_notes": "Diabetes management requires medication adjustment. Increase Metformin dose and add exercise routine. Schedule nutrition consultation.",
+      "file_type": "PDF",
+      "attachments": ["lab-results.pdf"]
+    }
+  ],
+  "test_flows": [
+    {
+      "name": "Complete Medical Record Flow",
+      "steps": [
+        "Admin creates organization",
+        "Admin registers and activates doctor", 
+        "Doctor creates medical record for patient",
+        "Patient views and decrypts record",
+        "Patient grants access to second doctor",
+        "Second doctor views and decrypts record",
+        "Patient revokes access",
+        "Public verification of record"
+      ]
+    }
+  ],
+  "environment": {
+    "network": "devnet",
+    "node_url": "https://fullnode.devnet.aptoslabs.com/v1",
+    "faucet_url": "https://faucet.devnet.aptoslabs.com",
+    "explorer_url": "https://explorer.aptoslabs.com"
+  }
+}
